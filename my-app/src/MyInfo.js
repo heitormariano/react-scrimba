@@ -15,7 +15,7 @@ function MyInfo() {
                     <ol>
                         <li>Canadá</li>
                         <li>Israel</li>
-                        <li>Mato Grosoo - Brasil</li>
+                        <li>Mato Grosso - Brasil</li>
                     </ol>
                 </li>
             </ul>
