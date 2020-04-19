@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import MyList from './MyList';
+import MyInfo from './MyInfo';
+
+let novoParagrafo = document.createElement('p');
+novoParagrafo.innerHTML = 'Mais um parágrafo';
+
+function formatName(user) {
+    return `Meu nome é ${user.name} e tenho ${user.age} anos de idade`;
+}
+
+const user = {
+    name: 'Heitor Mariano',
+    age: 32,
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <div>
+        <h1>Hello World!</h1>
+        <p>Parágrafo de teste</p>
+        novoParagrafo
+        <p>Lista não ordenada:</p>
+        <MyList />
+        <h2>Usando uma função</h2>
+        <p>{formatName(user)}</p>
+        <MyInfo />
+    </div>,
+    document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
